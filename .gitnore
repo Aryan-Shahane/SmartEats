@@ -1,0 +1,6 @@
+# Ignore macOS system files
+.DS_Store
+
+# Ignore android studio files
+.idea/misc.xml
+.idea/workspace.xml
