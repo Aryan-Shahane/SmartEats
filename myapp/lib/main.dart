@@ -11,27 +11,42 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+      title: 'Smart Eats',
+      home: Scaffold(
+        backgroundColor: Color(0xFF9F8170),
+        appBar: AppBar(
+          title: Text('Let\'s get to know you!'),
+          // You can customize the app bar as needed
+        ),
+        body: Padding(
+          padding: EdgeInsets.only(top: 50.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                padding: EdgeInsets.all(16.0), // Add padding to the container
+                child: Text(
+                    'What are your dislikes/allergies?', // Text content
+                style: TextStyle(
+                  fontSize: 22, // Adjust font size as needed
+                  fontWeight: FontWeight.bold, // Make text bold
+                  fontFamily: 'Roboto',
+                    color: Colors.white,
+                ),
+              ),
+            ),
+              SizedBox(height: 20),
+              Text(
+                'Additional Text',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.black,
+                ),
+              ),
+          ],
+        ),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      ),
     );
   }
 }
@@ -84,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        title: Text('Let\'s get to know you!'),
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
