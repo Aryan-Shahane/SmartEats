@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Image(image: AssetImage('assets/peanuts.jpeg')),
               Container(
                 padding: EdgeInsets.all(16.0), // Add padding to the container
                 child: Text(
